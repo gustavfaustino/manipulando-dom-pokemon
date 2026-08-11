@@ -1,0 +1,197 @@
+:root {
+  --font-primaria: "Mona Sans", sans-serif;
+}
+
+.font-pokemon {
+  font-family: "Press Start 2P", cursive;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url("./assets/pokemon_wallpaper.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* Tenho que subir mais a imagem pra ver o final dela */
+  background-position-y: -65vh;
+}
+
+.skip-link {
+  position: absolute;
+  top: -3.125rem;
+  left: 0.625rem;
+  background-color: #000;
+  color: #fff;
+  padding: 0.625rem 1rem;
+  z-index: 1000;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 0.625rem;
+}
+
+header nav.nav-ativa {
+  display: flex;
+  flex-direction: column;
+  background: #dc2626;
+  border: 4px solid #000;
+  border-radius: 1rem;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  z-index: 50;
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 1);
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #f3f4f6;
+  border: 2px solid #000;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.todo-item:hover {
+  background: #e5e7eb;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.acoes button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  padding: 0.4rem;
+  border: 2px solid #000;
+  transition: transform 0.1s;
+}
+
+.acoes button:active {
+  transform: scale(0.95);
+}
+
+.concluir {
+  color: #fff;
+  background-color: #10b981;
+}
+.concluir:hover {
+  background-color: #059669;
+}
+
+.remover {
+  color: #fff;
+  background-color: #ef4444;
+}
+.remover:hover {
+  background-color: #dc2626;
+}
+
+.tarefa-concluida {
+  text-decoration: line-through;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.pokemon-display {
+  background-color: #fff;
+  border: 4px solid #000;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.pokemon-display::before {
+  content: "";
+  position: absolute;
+  bottom: 2rem;
+  width: 80%;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.pokemon-img-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+}
+
+.pokemon-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.pokemon-info {
+  width: 100%;
+  background: #000;
+  color: #10b981;
+  font-family: "Press Start 2P", monospace;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.erro {
+  background: #000;
+  color: #ef4444;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.8rem;
+  text-align: center;
+  border: 4px solid #000;
+  text-transform: uppercase;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 4px;
+}
