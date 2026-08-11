@@ -17,8 +17,6 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  /* Tenho que subir mais a imagem pra ver o final dela */
-  background-position-y: -65vh;
 }
 
 .skip-link {
